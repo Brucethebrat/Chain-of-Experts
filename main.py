@@ -90,5 +90,6 @@ def chain_of_experts(problem,
 
 if __name__ == '__main__':
     from utils import read_problem
-    problem = read_problem('LPWP', 'prob_250')
-    chain_of_experts(problem, model_name='gpt-3.5-turbo-1106', enable_reflection=False)
+    # problem = read_problem('LPWP', 'prob_250')
+    problem = read_problem('ComplexOR', 'aircraft_assignment')
+    chain_of_experts(problem, max_collaborate_nums=2, model_name='gpt-3.5-turbo-1106', enable_reflection=False, max_trials=2)
